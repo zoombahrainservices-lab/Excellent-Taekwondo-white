@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Excellent Taekwondo - Bahrain's premier martial arts academy. Discover our mission, vision, and commitment to excellence in Adliya, Manama.">
+    <meta name="keywords" content="Martial arts academy Bahrain, Taekwondo school Manama, fitness center Adliya, about us">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Us - Excellent Taekwondo Bahrain">
+    <meta property="og:description" content="Discover our mission to build champions through discipline, strength, and excellence">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://excellenttaekwondo.com/about.html">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Excellent Taekwondo">
+    <meta name="twitter:description" content="Bahrain's premier martial arts and fitness academy">
+    
+    <title>About Us - Excellent Taekwondo Bahrain</title>
+    
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for About page */
+        .about-hero {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(225, 6, 0, 0.4)),
+                        url('images/about-bg.jpg') center/cover no-repeat fixed;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #000000;
+        }
+        
+        .about-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(40px, 6vw, 70px);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .mission-vision-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+        
+        .mission-box, .vision-box {
+            background: #FFFFFF;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .mission-box::before, .vision-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary-color);
+        }
+        
+        .mission-box:hover, .vision-box:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .box-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .box-icon i {
+            font-size: 36px;
+            color: #FFFFFF;
+        }
+        
+        .box-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .box-content {
+            color: #000000;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        
+        .philosophy-section {
+            background: #F8F8F8;
+            padding: 100px 0;
+        }
+        
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .philosophy-card {
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .philosophy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: var(--primary-color);
+            transition: height 0.5s ease;
+            z-index: 0;
+        }
+        
+        .philosophy-card:hover::before {
+            height: 100%;
+        }
+        
+        .philosophy-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .philosophy-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+        
+        .philosophy-card:hover .philosophy-icon {
+            color: #FFFFFF;
+        }
+        
+        .philosophy-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+        
+        .philosophy-text {
+            color: #000000;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+        
+        .philosophy-card:hover .philosophy-title,
+        .philosophy-card:hover .philosophy-text {
+            color: #FFFFFF;
+        }
+        
+        .gallery-section {
+            padding: 100px 0;
+            background: #FFFFFF;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 60px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.2);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+        
+        .values-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(225, 6, 0, 0.8)),
+                        url('images/values-bg.jpg') center/cover no-repeat fixed;
+            padding: 100px 0;
+            color: #000000;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .value-item {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+        
+        .value-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+        
+        .value-content h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .value-content p {
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        @media (max-width: 768px) {
+            .mission-vision-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="excellent_black_page-0001-removebg-preview.png" alt="Excellent Taekwondo Logo" class="logo-img">
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="profile.html" class="nav-link">Profile</a></li>
+                    <li><a href="classes.html" class="nav-link">Classes</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="animate-fadeInUp">
+                <h1>ABOUT US</h1>
+                <p style="font-size: 20px; color: #000000;">Building Champions Since 2015</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Story Section -->
+    <section style="padding: 100px 0; background: #FFFFFF;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">OUR STORY</span>
+                <h2 class="section-title">WHO WE ARE</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <p class="lead animate-on-scroll" style="margin-bottom: 30px;">
+                    Excellent Taekwondo is Bahrain's premier martial arts and fitness academy, 
+                    dedicated to empowering individuals through the transformative power of martial arts 
+                    and athletic training.
+                </p>
+                <p class="animate-on-scroll" style="color: #000000; line-height: 1.8; margin-bottom: 20px;">
+                    Founded in 2015 in the heart of Adliya, Manama, we have grown from a small 
+                    Taekwondo dojang to a comprehensive training facility offering multiple disciplines. 
+                    Our journey began with a simple vision: to create a space where people of all ages 
+                    and abilities could discover their potential through martial arts.
+                </p>
+                <p class="animate-on-scroll" style="color: #000000; line-height: 1.8;">
+                    Today, we serve over 500 active students, from young children taking their first 
+                    steps in martial arts to adults pursuing fitness goals and competitive athletes 
+                    training for championships. Our success is built on the foundation of excellent 
+                    instruction, modern facilities, and a supportive community that celebrates every achievement.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mission & Vision -->
+    <section style="padding: 100px 0; background: #F8F8F8;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">OUR PURPOSE</span>
+                <h2 class="section-title">MISSION & VISION</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="mission-vision-section">
+                <div class="mission-box animate-on-scroll">
+                    <div class="box-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="box-title">Our Mission</h3>
+                    <div class="box-content">
+                        <p>
+                            To provide world-class martial arts and fitness training that transforms lives 
+                            through discipline, physical excellence, and mental strength. We are committed to:
+                        </p>
+                        <ul style="margin-top: 20px; padding-left: 20px;">
+                            <li style="margin-bottom: 15px;">Delivering exceptional instruction from certified professionals</li>
+                            <li style="margin-bottom: 15px;">Creating a safe, inclusive, and supportive training environment</li>
+                            <li style="margin-bottom: 15px;">Developing character, confidence, and leadership skills</li>
+                            <li style="margin-bottom: 15px;">Fostering a community united by the pursuit of excellence</li>
+                            <li>Promoting health, fitness, and well-being for all ages</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="vision-box animate-on-scroll">
+                    <div class="box-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="box-title">Our Vision</h3>
+                    <div class="box-content">
+                        <p>
+                            To be recognized as the leading martial arts and fitness academy in Bahrain and 
+                            the GCC region, known for:
+                        </p>
+                        <ul style="margin-top: 20px; padding-left: 20px;">
+                            <li style="margin-bottom: 15px;">Excellence in martial arts instruction and competition success</li>
+                            <li style="margin-bottom: 15px;">Innovation in training methods and programs</li>
+                            <li style="margin-bottom: 15px;">Development of national and international champions</li>
+                            <li style="margin-bottom: 15px;">Contribution to the growth of martial arts in Bahrain</li>
+                            <li>Positive impact on our community and students' lives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">OUR APPROACH</span>
+                <h2 class="section-title">TRAINING PHILOSOPHY</h2>
+                <div class="title-underline"></div>
+                <p style="max-width: 700px; margin: 20px auto 0; color: #000000;">
+                    Our teaching philosophy is rooted in traditional martial arts values 
+                    combined with modern training science and sports psychology.
+                </p>
+            </div>
+            
+            <div class="philosophy-grid">
+                <div class="philosophy-card animate-on-scroll">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="philosophy-title">Student-Centered</h3>
+                    <p class="philosophy-text">
+                        We recognize that every student is unique. Our programs are tailored to individual 
+                        goals, abilities, and learning styles, ensuring personalized attention and progress.
+                    </p>
+                </div>
+                
+                <div class="philosophy-card animate-on-scroll">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="philosophy-title">Excellence Focus</h3>
+                    <p class="philosophy-text">
+                        We set high standards and provide the tools, training, and support needed to achieve 
+                        them. Excellence is not just a goal—it's our standard in everything we do.
+                    </p>
+                </div>
+                
+                <div class="philosophy-card animate-on-scroll">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="philosophy-title">Community Built</h3>
+                    <p class="philosophy-text">
+                        We foster a supportive community where students encourage each other, celebrate 
+                        achievements together, and grow as a team while pursuing individual goals.
+                    </p>
+                </div>
+                
+                <div class="philosophy-card animate-on-scroll">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="philosophy-title">Holistic Development</h3>
+                    <p class="philosophy-text">
+                        Training extends beyond physical skills. We develop mental strength, emotional 
+                        resilience, and life skills that benefit students in all areas of life.
+                    </p>
+                </div>
+                
+                <div class="philosophy-card animate-on-scroll">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="philosophy-title">Safety First</h3>
+                    <p class="philosophy-text">
+                        Safety is paramount. Our facilities, equipment, and training methods prioritize 
+                        injury prevention while maximizing learning and performance.
+                    </p>
+                </div>
+                
+                <div class="philosophy-card animate-on-scroll">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="philosophy-title">Continuous Growth</h3>
+                    <p class="philosophy-text">
+                        We believe in lifelong learning. Our instructors continuously update their skills, 
+                        and we encourage students to embrace a growth mindset in their training journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Core Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag" style="color: var(--primary-color);">WHAT WE STAND FOR</span>
+                <h2 class="section-title" style="color: #000000;">OUR CORE VALUES</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-item animate-on-scroll">
+                    <div class="value-number">01</div>
+                    <div class="value-content">
+                        <h3>Respect</h3>
+                        <p>
+                            Respect for instructors, fellow students, and oneself is the foundation of our 
+                            academy. We cultivate an environment where everyone is valued and treated with dignity.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="value-item animate-on-scroll">
+                    <div class="value-number">02</div>
+                    <div class="value-content">
+                        <h3>Discipline</h3>
+                        <p>
+                            Self-discipline is essential for martial arts mastery and life success. We teach 
+                            students to set goals, maintain focus, and develop habits that lead to achievement.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="value-item animate-on-scroll">
+                    <div class="value-number">03</div>
+                    <div class="value-content">
+                        <h3>Integrity</h3>
+                        <p>
+                            We operate with honesty, transparency, and ethical conduct in all our interactions. 
+                            Doing the right thing, even when no one is watching, defines our character.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="value-item animate-on-scroll">
+                    <div class="value-number">04</div>
+                    <div class="value-content">
+                        <h3>Perseverance</h3>
+                        <p>
+                            Success requires persistence through challenges. We encourage students to embrace 
+                            difficulties as opportunities for growth and never give up on their goals.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="value-item animate-on-scroll">
+                    <div class="value-number">05</div>
+                    <div class="value-content">
+                        <h3>Excellence</h3>
+                        <p>
+                            We pursue excellence in technique, character, and service. This commitment to being 
+                            our best inspires students to reach their full potential in training and life.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="value-item animate-on-scroll">
+                    <div class="value-number">06</div>
+                    <div class="value-content">
+                        <h3>Community</h3>
+                        <p>
+                            We are more than a training facility—we are a family. Building strong relationships 
+                            and supporting each other creates an atmosphere where everyone can thrive.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">TRAINING MOMENTS</span>
+                <h2 class="section-title">OUR GALLERY</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/gallery-1.jpg" alt="Taekwondo training session in Bahrain" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Taekwondo Training</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/gallery-2.jpg" alt="Fitness classes at Excellent Taekwondo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Fitness Sessions</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/gallery-3.jpg" alt="Swimming lessons Bahrain" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Swimming Lessons</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/gallery-4.jpg" alt="Belt ceremony Taekwondo Bahrain" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Belt Ceremonies</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/gallery-5.jpg" alt="Badminton training Bahrain" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Badminton Training</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/gallery-6.jpg" alt="Competition preparation martial arts" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Competition Prep</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Excellent Taekwondo</h4>
+                    <p>Building champions through discipline, strength, and excellence. Join Bahrain's premier martial arts and fitness academy.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Programs</h4>
+                    <ul>
+                        <li><a href="classes.html#taekwondo">Taekwondo Classes in Bahrain</a></li>
+                        <li><a href="classes.html#fitness">Fitness Classes in Bahrain</a></li>
+                        <li><a href="classes.html#swimming">Swimming Classes in Bahrain</a></li>
+                        <li><a href="classes.html#badminton">Badminton Classes in Bahrain</a></li>
+                        <li><a href="classes.html#umpire">Umpire Courses in Bahrain</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Adliya, Manama, Bahrain</p>
+                    <p>Phone: +973 XXXX XXXX</p>
+                    <p>Email: info@excellenttaekwondo.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Excellent Taekwondo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/973XXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

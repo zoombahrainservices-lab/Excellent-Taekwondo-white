@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet our certified instructors at Excellent Taekwondo in Bahrain. Expert martial arts trainers with international certifications and years of experience.">
+    <meta name="keywords" content="Taekwondo instructor Bahrain, martial arts trainer, certified coach, fitness instructor Bahrain">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Instructors - Excellent Taekwondo Bahrain">
+    <meta property="og:description" content="Meet our team of certified and experienced martial arts instructors">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://excellenttaekwondo.com/profile.html">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Instructors - Excellent Taekwondo">
+    <meta name="twitter:description" content="Certified instructors dedicated to your excellence">
+    
+    <title>Our Instructors - Excellent Taekwondo Bahrain</title>
+    
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for Profile page */
+        .profile-hero {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(225, 6, 0, 0.4)),
+                        url('images/profile-bg.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #000000;
+        }
+        
+        .profile-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(40px, 6vw, 70px);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .instructor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            margin-top: 60px;
+        }
+        
+        .instructor-card {
+            background: #FFFFFF;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .instructor-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .instructor-image {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .instructor-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .instructor-card:hover .instructor-image img {
+            transform: scale(1.1);
+        }
+        
+        .belt-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .instructor-info {
+            padding: 30px;
+        }
+        
+        .instructor-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .instructor-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .instructor-bio {
+            color: #000000;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .certifications {
+            margin-bottom: 25px;
+        }
+        
+        .certifications h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            color: #000000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .cert-list {
+            list-style: none;
+        }
+        
+        .cert-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #000000;
+        }
+        
+        .cert-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        .achievements-timeline {
+            margin-top: 80px;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            width: calc(50% - 40px);
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 40px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 40px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border: 4px solid #FFFFFF;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 4px var(--primary-color);
+            z-index: 2;
+        }
+        
+        .timeline-year {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .timeline-description {
+            color: #000000;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: column !important;
+            }
+            
+            .timeline-content {
+                width: 100%;
+                margin-left: 50px !important;
+                margin-right: 0 !important;
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+            
+            .instructor-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="excellent_black_page-0001-removebg-preview.png" alt="Excellent Taekwondo Logo" class="logo-img">
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="profile.html" class="nav-link active">Profile</a></li>
+                    <li><a href="classes.html" class="nav-link">Classes</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Profile Hero -->
+    <section class="profile-hero">
+        <div class="container">
+            <div class="animate-fadeInUp">
+                <h1>MEET OUR INSTRUCTORS</h1>
+                <p style="font-size: 20px; color: #000000;">Certified professionals dedicated to your excellence</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Instructors Section -->
+    <section class="instructors-section" style="padding: 100px 0; background: #FFFFFF;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">OUR TEAM</span>
+                <h2 class="section-title">CERTIFIED INSTRUCTORS</h2>
+                <div class="title-underline"></div>
+                <p style="max-width: 700px; margin: 20px auto 0; color: #000000;">
+                    Our team comprises internationally certified instructors with decades of combined experience 
+                    in martial arts, fitness training, and coaching. Each instructor is passionate about helping 
+                    students achieve their goals.
+                </p>
+            </div>
+            
+            <div class="instructor-grid">
+                <!-- Instructor 1: Faisal MM -->
+                <div class="instructor-card animate-on-scroll">
+                    <div class="instructor-image">
+                        <img src="images/instructor-1.jpg" alt="Master Faisal MM - Taekwondo Instructor" loading="lazy">
+                        <div class="belt-badge">5th Dan Black Belt</div>
+                    </div>
+                    <div class="instructor-info">
+                        <h3 class="instructor-name">Master Faisal MM</h3>
+                        <p class="instructor-title">Head Instructor - 5th Dan Black Belt</p>
+                        <p class="instructor-bio">
+                            Master Faisal MM is a highly accomplished martial arts expert and multi-disciplinary instructor 
+                            with extensive experience in Taekwondo, fitness training, swimming, and nutrition. As an 
+                            International Master and Black Belt Examiner, he brings world-class expertise to our academy.
+                        </p>
+                        <div class="certifications">
+                            <h4>Qualifications & Roles</h4>
+                            <ul class="cert-list">
+                                <li>5th Dan Black Belt - Taekwondo Trainer</li>
+                                <li>National Referee</li>
+                                <li>International Master And Black Belt Examiner</li>
+                                <li>Integrative Nutrition - Health Coach at Manama, Bahrain</li>
+                                <li>Swimming Instructor at Manama, Bahrain</li>
+                                <li>Martial Arts Instructor at Manama, Bahrain</li>
+                                <li>Fitness Instructor and Personal Trainer at Manama, Bahrain</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instructor 2: Muhammed Yoosaf MA -->
+                <div class="instructor-card animate-on-scroll">
+                    <div class="instructor-image">
+                        <img src="images/instructor-2.jpg" alt="Muhammed Yoosaf MA - Taekwondo Instructor" loading="lazy">
+                        <div class="belt-badge">2nd Dan Black Belt</div>
+                    </div>
+                    <div class="instructor-info">
+                        <h3 class="instructor-name">Muhammed Yoosaf MA</h3>
+                        <p class="instructor-title">Instructor - 2nd Dan Black Belt</p>
+                        <p class="instructor-bio">
+                            Muhammed Yoosaf MA is a dedicated Taekwondo instructor with a 2nd Dan Black Belt certification. 
+                            He is committed to teaching the fundamental principles of martial arts and helping students 
+                            develop both physical skills and mental discipline.
+                        </p>
+                        <div class="certifications">
+                            <h4>Qualifications</h4>
+                            <ul class="cert-list">
+                                <li>2nd Dan Black Belt</li>
+                                <li>Taekwondo Instructor</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Achievements Timeline -->
+    <section class="achievements-timeline" style="background: #F8F8F8;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">OUR JOURNEY</span>
+                <h2 class="section-title">ACHIEVEMENTS & MILESTONES</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <h3 class="timeline-title">National Championship Victory</h3>
+                        <p class="timeline-description">
+                            Our students secured 15 medals at the Bahrain National Taekwondo Championship, 
+                            including 5 gold medals in various categories.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <h3 class="timeline-title">Facility Expansion</h3>
+                        <p class="timeline-description">
+                            Opened our new state-of-the-art training facility in Adliya, featuring modern 
+                            equipment, dedicated training areas, and enhanced amenities.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <h3 class="timeline-title">International Recognition</h3>
+                        <p class="timeline-description">
+                            Received official recognition from the International Taekwondo Federation 
+                            and became an authorized training center.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <h3 class="timeline-title">500 Students Milestone</h3>
+                        <p class="timeline-description">
+                            Reached a milestone of training over 500 active students across all our 
+                            programs, making us one of Bahrain's largest martial arts academies.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018</div>
+                        <h3 class="timeline-title">Program Expansion</h3>
+                        <p class="timeline-description">
+                            Added Swimming, Badminton, and Fitness programs to complement our 
+                            Taekwondo training, offering comprehensive athletic development.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h3 class="timeline-title">Academy Founded</h3>
+                        <p class="timeline-description">
+                            Excellent Taekwondo was established with a vision to provide world-class 
+                            martial arts training in Bahrain.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Join Our Team Section -->
+    <section class="join-team" style="background: var(--dark-section); padding: 80px 0;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">CAREER OPPORTUNITIES</span>
+                <h2 class="section-title">JOIN OUR TEAM</h2>
+                <div class="title-underline"></div>
+                <p style="max-width: 700px; margin: 20px auto; color: #000000;">
+                    Are you a certified instructor passionate about martial arts and fitness? 
+                    We're always looking for talented individuals to join our growing team.
+                </p>
+                <div style="margin-top: 40px;">
+                    <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Excellent Taekwondo</h4>
+                    <p>Building champions through discipline, strength, and excellence. Join Bahrain's premier martial arts and fitness academy.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Programs</h4>
+                    <ul>
+                        <li><a href="classes.html#taekwondo">Taekwondo Classes in Bahrain</a></li>
+                        <li><a href="classes.html#fitness">Fitness Classes in Bahrain</a></li>
+                        <li><a href="classes.html#swimming">Swimming Classes in Bahrain</a></li>
+                        <li><a href="classes.html#badminton">Badminton Classes in Bahrain</a></li>
+                        <li><a href="classes.html#umpire">Umpire Courses in Bahrain</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Adliya, Manama, Bahrain</p>
+                    <p>Phone: +973 XXXX XXXX</p>
+                    <p>Email: info@excellenttaekwondo.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Excellent Taekwondo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/973XXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

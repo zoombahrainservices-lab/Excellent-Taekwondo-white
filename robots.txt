@@ -1,0 +1,12 @@
+# Excellent Taekwondo - Robots.txt
+# https://excellenttaekwondo.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://excellenttaekwondo.com/sitemap.xml
+
+# Crawl-delay (optional, adjust if needed)
+# Crawl-delay: 10
+
