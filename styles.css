@@ -187,7 +187,7 @@ img {
    =================================== */
 .hero {
     position: relative;
-    height: 100vh;
+    height: calc(100vh + 50px);
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(225, 6, 0, 0.3)),
                 url('images/pexels-rdne-7045750.jpg') center/cover no-repeat;
     display: flex;
@@ -217,6 +217,7 @@ img {
     font-size: clamp(40px, 8vw, 90px);
     font-weight: 900;
     line-height: 1.1;
+    margin-top: 50px;
     margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 3px;
