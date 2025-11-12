@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master Muhammed Yoosaf MA - 2nd Dan Black Belt instructor at Excellent Taekwondo Bahrain. Dedicated Taekwondo instructor committed to excellence.">
+    <meta name="keywords" content="Master Yoosaf MA, Taekwondo instructor Bahrain, 2nd Dan Black Belt, martial arts instructor">
+    
+    <title>Master Muhammed Yoosaf MA - Excellent Taekwondo Bahrain</title>
+    
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .instructor-hero {
+            background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(225, 6, 0, 0.3)),
+                        url('images/Gemini_Generated_Image_8l9wju8l9wju8l9w.png');
+            background-position: center, center calc(50% + 400px);
+            background-size: cover, cover;
+            background-repeat: no-repeat, no-repeat;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        
+        .instructor-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(40px, 6vw, 70px);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .instructor-hero p {
+            font-size: clamp(18px, 3vw, 24px);
+            margin-bottom: 30px;
+        }
+        
+        .instructor-detail {
+            padding: 100px 0;
+            background: #FFFFFF;
+        }
+        
+        .instructor-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .instructor-photo {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .photo-wrapper {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .photo-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .belt-badge-large {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: #FFFFFF;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .instructor-info h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .instructor-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .instructor-bio {
+            color: #000000;
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .qualifications-section {
+            background: #F8F8F8;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .qualifications-section h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            color: #000000;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+        
+        .qual-list {
+            list-style: none;
+        }
+        
+        .qual-list li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            color: #000000;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .qual-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .qual-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+        
+        @media (max-width: 968px) {
+            .instructor-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .instructor-photo {
+                position: static;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .instructor-hero {
+                height: 50vh;
+            }
+            
+            .instructor-detail {
+                padding: 60px 0;
+            }
+            
+            .qualifications-section {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .instructor-hero {
+                height: 40vh;
+                padding: 20px;
+            }
+            
+            .instructor-hero h1 {
+                font-size: 32px;
+            }
+            
+            .qualifications-section {
+                padding: 25px 15px;
+            }
+            
+            .qual-list li {
+                font-size: 14px;
+                padding-left: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="excellent black_page-0001.jpg" alt="Excellent Taekwondo Logo" class="logo-img">
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="profile.html" class="nav-link dropdown-toggle active">
+                            Profile <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="master-faisal.html" class="dropdown-item">
+                                <i class="fas fa-user-tie"></i> Master Faisal MM
+                            </a>
+                            <a href="master-yoosaf.html" class="dropdown-item">
+                                <i class="fas fa-user-graduate"></i> Master Yoosaf MA
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="classes.html" class="nav-link dropdown-toggle">
+                            Classes <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="taekwondo.html" class="dropdown-item">
+                                <i class="fas fa-fire"></i> Taekwondo Classes
+                            </a>
+                            <a href="fitness.html" class="dropdown-item">
+                                <i class="fas fa-dumbbell"></i> Fitness Classes
+                            </a>
+                            <a href="swimming.html" class="dropdown-item">
+                                <i class="fas fa-swimmer"></i> Swimming Classes
+                            </a>
+                            <a href="badminton.html" class="dropdown-item">
+                                <i class="fas fa-table-tennis"></i> Badminton Classes
+                            </a>
+                            <a href="umpire.html" class="dropdown-item">
+                                <i class="fas fa-whistle"></i> Umpire Courses
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Instructor Hero -->
+    <section class="instructor-hero">
+        <div class="container">
+            <div class="animate-fadeInUp">
+                <h1>MASTER MUHAMMED YOOSAF MA</h1>
+                <p>2nd Dan Black Belt - Instructor</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Instructor Details -->
+    <section class="instructor-detail">
+        <div class="container">
+            <div class="instructor-content">
+                <div class="instructor-photo animate-on-scroll">
+                    <div class="photo-wrapper">
+                        <img src="images/Gemini_Generated_Image_8l9wju8l9wju8l9w.png" alt="Master Muhammed Yoosaf MA - Taekwondo Instructor">
+                        <div class="belt-badge-large">2nd Dan Black Belt</div>
+                    </div>
+                </div>
+                
+                <div class="instructor-info animate-on-scroll">
+                    <h2>Master Muhammed Yoosaf MA</h2>
+                    <p class="instructor-title">Taekwondo Instructor</p>
+                    <p class="instructor-bio">
+                        Muhammed Yoosaf MA is a dedicated Taekwondo instructor with a 2nd Dan Black Belt certification. 
+                        He is committed to teaching the fundamental principles of martial arts and helping students 
+                        develop both physical skills and mental discipline.
+                    </p>
+                    <p class="instructor-bio">
+                        Master Yoosaf brings passion and dedication to every class, focusing on proper technique, 
+                        character development, and instilling the values of respect and perseverance in his students. 
+                        His patient teaching style makes him especially effective with younger students and beginners.
+                    </p>
+                    
+                    <div class="qualifications-section">
+                        <h3><i class="fas fa-certificate"></i> Qualifications</h3>
+                        <ul class="qual-list">
+                            <li>2nd Dan Black Belt</li>
+                            <li>Certified Taekwondo Instructor</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="qualifications-section">
+                        <h3><i class="fas fa-star"></i> Teaching Focus</h3>
+                        <ul class="qual-list">
+                            <li>Fundamental Taekwondo Techniques</li>
+                            <li>Form (Poomsae) Training</li>
+                            <li>Basic to Intermediate Sparring</li>
+                            <li>Character & Discipline Development</li>
+                            <li>Kids & Teen Classes</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="index.html#contact" class="btn btn-primary">Book a Session with Master Yoosaf</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Excellent Taekwondo</h4>
+                    <p>Building champions through discipline, strength, and excellence. Join Bahrain's premier martial arts and fitness academy.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Programs</h4>
+                    <ul>
+                        <li><a href="taekwondo.html">Taekwondo Classes in Bahrain</a></li>
+                        <li><a href="fitness.html">Fitness Classes in Bahrain</a></li>
+                        <li><a href="swimming.html">Swimming Classes in Bahrain</a></li>
+                        <li><a href="badminton.html">Badminton Classes in Bahrain</a></li>
+                        <li><a href="umpire.html">Umpire Courses in Bahrain</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Adliya, Manama, Bahrain</p>
+                    <p>Phone: +973 3205 1159</p>
+                    <p>Email: info@excellenttaekwondo.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Excellent Taekwondo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/97332051159" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

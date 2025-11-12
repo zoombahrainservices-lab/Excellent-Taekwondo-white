@@ -57,6 +57,14 @@
             margin-bottom: 100px;
         }
         
+        @media (max-width: 968px) {
+            .mission-vision-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                margin-bottom: 60px;
+            }
+        }
+        
         .mission-box, .vision-box {
             background: #FFFFFF;
             padding: 50px;
@@ -124,6 +132,20 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-top: 60px;
+        }
+        
+        @media (max-width: 968px) {
+            .philosophy-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
         }
         
         .philosophy-card {
@@ -203,9 +225,16 @@
         
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-top: 60px;
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
         }
         
         .gallery-item {
@@ -295,14 +324,21 @@
         }
         
         @media (max-width: 768px) {
-            .mission-vision-section {
-                grid-template-columns: 1fr;
-                gap: 40px;
+            .about-hero {
+                height: 50vh;
+                padding: 20px 15px;
             }
             
-            .philosophy-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
+            .mission-box, .vision-box {
+                padding: 30px 20px;
+            }
+            
+            .philosophy-section {
+                padding: 60px 0;
+            }
+            
+            .gallery-section {
+                padding: 60px 0;
             }
             
             .values-grid {
@@ -310,8 +346,96 @@
                 gap: 30px;
             }
             
-            .gallery-grid {
-                grid-template-columns: 1fr;
+            .values-section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-hero h1 {
+                font-size: 36px;
+            }
+            
+            .about-hero p {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+            
+            .mission-box, .vision-box {
+                padding: 25px 15px;
+            }
+            
+            .box-icon {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 20px;
+            }
+            
+            .box-icon i {
+                font-size: 28px;
+            }
+            
+            .box-title {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+            
+            .box-content {
+                font-size: 14px;
+            }
+            
+            .box-content ul {
+                padding-left: 15px;
+            }
+            
+            .box-content ul li {
+                margin-bottom: 12px;
+                font-size: 14px;
+            }
+            
+            .philosophy-card {
+                padding: 30px 20px;
+            }
+            
+            .philosophy-icon {
+                font-size: 40px;
+            }
+            
+            .philosophy-title {
+                font-size: 20px;
+            }
+            
+            .philosophy-text {
+                font-size: 14px;
+            }
+            
+            .gallery-item {
+                height: 250px;
+            }
+            
+            .gallery-overlay {
+                padding: 20px;
+            }
+            
+            .gallery-title {
+                font-size: 18px;
+            }
+            
+            .value-item {
+                gap: 15px;
+            }
+            
+            .value-number {
+                font-size: 36px;
+            }
+            
+            .value-content h3 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .value-content p {
+                font-size: 14px;
             }
         }
     </style>
@@ -333,11 +457,44 @@
                     <span></span>
                 </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link active">About</a></li>
-                    <li><a href="profile.html" class="nav-link">Profile</a></li>
-                    <li><a href="classes.html" class="nav-link">Classes</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="profile.html" class="nav-link dropdown-toggle">
+                            Profile <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="master-faisal.html" class="dropdown-item">
+                                <i class="fas fa-user-tie"></i> Master Faisal MM
+                            </a>
+                            <a href="master-yoosaf.html" class="dropdown-item">
+                                <i class="fas fa-user-graduate"></i> Master Yoosaf MA
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="classes.html" class="nav-link dropdown-toggle">
+                            Classes <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="taekwondo.html" class="dropdown-item">
+                                <i class="fas fa-fire"></i> Taekwondo Classes
+                            </a>
+                            <a href="fitness.html" class="dropdown-item">
+                                <i class="fas fa-dumbbell"></i> Fitness Classes
+                            </a>
+                            <a href="swimming.html" class="dropdown-item">
+                                <i class="fas fa-swimmer"></i> Swimming Classes
+                            </a>
+                            <a href="badminton.html" class="dropdown-item">
+                                <i class="fas fa-table-tennis"></i> Badminton Classes
+                            </a>
+                            <a href="umpire.html" class="dropdown-item">
+                                <i class="fas fa-whistle"></i> Umpire Courses
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -674,11 +831,11 @@
                 <div class="footer-col">
                     <h4>Our Programs</h4>
                     <ul>
-                        <li><a href="classes.html#taekwondo">Taekwondo Classes in Bahrain</a></li>
-                        <li><a href="classes.html#fitness">Fitness Classes in Bahrain</a></li>
-                        <li><a href="classes.html#swimming">Swimming Classes in Bahrain</a></li>
-                        <li><a href="classes.html#badminton">Badminton Classes in Bahrain</a></li>
-                        <li><a href="classes.html#umpire">Umpire Courses in Bahrain</a></li>
+                        <li><a href="taekwondo.html">Taekwondo Classes in Bahrain</a></li>
+                        <li><a href="fitness.html">Fitness Classes in Bahrain</a></li>
+                        <li><a href="swimming.html">Swimming Classes in Bahrain</a></li>
+                        <li><a href="badminton.html">Badminton Classes in Bahrain</a></li>
+                        <li><a href="umpire.html">Umpire Courses in Bahrain</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -695,7 +852,7 @@
     </footer>
     
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/973XXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+    <a href="https://wa.me/97332051159" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
     

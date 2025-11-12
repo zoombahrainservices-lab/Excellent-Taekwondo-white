@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swimming classes in Bahrain at Excellent Taekwondo. Professional swimming instruction for kids and adults of all skill levels in Adliya, Manama.">
+    <meta name="keywords" content="Swimming classes Bahrain, swimming lessons Manama, learn to swim, kids swimming Bahrain, adult swimming classes">
+    
+    <title>Swimming Classes in Bahrain - Excellent Taekwondo</title>
+    
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .class-hero {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(225, 6, 0, 0.3)),
+                        url('images/pexels-jim-de-ramos-395808-1263349.jpg') center/cover no-repeat fixed;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        
+        .class-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(40px, 6vw, 70px);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .class-hero p {
+            font-size: clamp(18px, 3vw, 24px);
+            margin-bottom: 30px;
+        }
+        
+        .class-detail-section {
+            padding: 80px 0;
+            background: #FFFFFF;
+        }
+        
+        .class-detail-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .class-detail-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 500px;
+        }
+        
+        .class-detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .class-detail-image:hover img {
+            transform: scale(1.1);
+        }
+        
+        .class-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: var(--primary-color);
+            color: #FFFFFF;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .class-detail-text h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .class-subtitle {
+            font-size: 18px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .class-description {
+            color: #000000;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .class-features {
+            margin-bottom: 30px;
+        }
+        
+        .class-features h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #000000;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .feature-item-inline {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #000000;
+        }
+        
+        .feature-item-inline i {
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+        
+        .class-levels {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .level-badge {
+            background: var(--secondary-color);
+            color: #FFFFFF;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .schedule-info {
+            background: #F8F8F8;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-color);
+            margin-bottom: 30px;
+        }
+        
+        .schedule-info h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            color: #000000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .schedule-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            color: #000000;
+        }
+        
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 968px) {
+            .class-detail-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .class-detail-image {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .class-hero {
+                height: 50vh;
+            }
+            
+            .class-detail-section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .class-hero {
+                height: 40vh;
+                padding: 20px;
+            }
+            
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .class-detail-image {
+                height: 300px;
+            }
+            
+            .schedule-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="excellent black_page-0001.jpg" alt="Excellent Taekwondo Logo" class="logo-img">
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="profile.html" class="nav-link dropdown-toggle">
+                            Profile <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="master-faisal.html" class="dropdown-item">
+                                <i class="fas fa-user-tie"></i> Master Faisal MM
+                            </a>
+                            <a href="master-yoosaf.html" class="dropdown-item">
+                                <i class="fas fa-user-graduate"></i> Master Yoosaf MA
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="classes.html" class="nav-link dropdown-toggle active">
+                            Classes <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="taekwondo.html" class="dropdown-item">
+                                <i class="fas fa-fire"></i> Taekwondo Classes
+                            </a>
+                            <a href="fitness.html" class="dropdown-item">
+                                <i class="fas fa-dumbbell"></i> Fitness Classes
+                            </a>
+                            <a href="swimming.html" class="dropdown-item">
+                                <i class="fas fa-swimmer"></i> Swimming Classes
+                            </a>
+                            <a href="badminton.html" class="dropdown-item">
+                                <i class="fas fa-table-tennis"></i> Badminton Classes
+                            </a>
+                            <a href="umpire.html" class="dropdown-item">
+                                <i class="fas fa-whistle"></i> Umpire Courses
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Class Hero -->
+    <section class="class-hero">
+        <div class="container">
+            <div class="animate-fadeInUp">
+                <h1>SWIMMING CLASSES</h1>
+                <p>Learn to Swim with Confidence</p>
+                <a href="index.html#contact" class="btn btn-primary">Register Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Class Details -->
+    <section class="class-detail-section">
+        <div class="container">
+            <div class="class-detail-content">
+                <div class="class-detail-image animate-on-scroll">
+                    <img src="images/pexels-jim-de-ramos-395808-1263349.jpg" alt="Swimming classes in Bahrain for all ages">
+                    <div class="class-badge">Kids & Adults</div>
+                </div>
+                <div class="class-detail-text animate-on-scroll">
+                    <h2>Swimming Classes in Bahrain</h2>
+                    <p class="class-subtitle">Learn to Swim with Confidence</p>
+                    <p class="class-description">
+                        Our swimming program offers professional instruction for all ages and skill levels. From beginners 
+                        learning water safety and basic strokes to advanced swimmers perfecting their technique, our certified 
+                        swimming instructors provide personalized attention in a safe and supportive environment.
+                    </p>
+                    <p class="class-description">
+                        We teach all four competitive strokes, proper breathing techniques, water safety, and advanced 
+                        swimming skills. Our heated pool facility ensures comfortable year-round training.
+                    </p>
+                    
+                    <div class="class-levels">
+                        <span class="level-badge">Kids (4+ years)</span>
+                        <span class="level-badge">Adults</span>
+                        <span class="level-badge">Competitive</span>
+                    </div>
+                    
+                    <div class="class-features">
+                        <h3>Course Content</h3>
+                        <div class="features-list">
+                            <div class="feature-item-inline">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Water Safety & Survival</span>
+                            </div>
+                            <div class="feature-item-inline">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Four Competitive Strokes</span>
+                            </div>
+                            <div class="feature-item-inline">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Diving & Turns</span>
+                            </div>
+                            <div class="feature-item-inline">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Breathing Techniques</span>
+                            </div>
+                            <div class="feature-item-inline">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Endurance Building</span>
+                            </div>
+                            <div class="feature-item-inline">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Competition Preparation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-info">
+                        <h4><i class="far fa-clock"></i> Class Schedule</h4>
+                        <div class="schedule-item">
+                            <span><strong>Kids Lessons:</strong></span>
+                            <span>Mon, Wed, Fri - 3:00 PM & 4:00 PM</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span><strong>Adult Lessons:</strong></span>
+                            <span>Tue, Thu, Sat - 5:00 PM & 7:00 PM</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span><strong>Private Lessons:</strong></span>
+                            <span>By Appointment</span>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html#contact" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section style="background: #F8F8F8; padding: 80px 0;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">WHY SWIMMING</span>
+                <h2 class="section-title">PROGRAM BENEFITS</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-life-ring"></i>
+                    </div>
+                    <h3 class="feature-title">Water Safety</h3>
+                    <p class="feature-description">Learn essential water safety skills and survival techniques for all situations.</p>
+                </div>
+                <div class="feature-item animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="feature-title">Full Body Workout</h3>
+                    <p class="feature-description">Swimming engages all major muscle groups for a complete cardiovascular workout.</p>
+                </div>
+                <div class="feature-item animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3 class="feature-title">Low Impact</h3>
+                    <p class="feature-description">Easy on joints while building strength, perfect for all ages and fitness levels.</p>
+                </div>
+                <div class="feature-item animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="feature-title">Competitive Training</h3>
+                    <p class="feature-description">Prepare for competitive swimming events with advanced technique coaching.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section style="background: var(--secondary-color); padding: 80px 0; text-align: center; color: #FFFFFF;">
+        <div class="container">
+            <div class="animate-on-scroll">
+                <h2 style="font-family: 'Oswald', sans-serif; font-size: clamp(32px, 5vw, 48px); margin-bottom: 20px; text-transform: uppercase;">
+                    READY TO DIVE IN?
+                </h2>
+                <p style="font-size: 20px; margin-bottom: 40px; color: rgba(255,255,255,0.9);">
+                    Start your swimming journey with expert instructors
+                </p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#contact" class="btn btn-primary">Contact Us Today</a>
+                    <a href="classes.html" class="btn btn-outline">View All Classes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Excellent Taekwondo</h4>
+                    <p>Building champions through discipline, strength, and excellence. Join Bahrain's premier martial arts and fitness academy.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Programs</h4>
+                    <ul>
+                        <li><a href="taekwondo.html">Taekwondo Classes in Bahrain</a></li>
+                        <li><a href="fitness.html">Fitness Classes in Bahrain</a></li>
+                        <li><a href="swimming.html">Swimming Classes in Bahrain</a></li>
+                        <li><a href="badminton.html">Badminton Classes in Bahrain</a></li>
+                        <li><a href="umpire.html">Umpire Courses in Bahrain</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Adliya, Manama, Bahrain</p>
+                    <p>Phone: +973 3205 1159</p>
+                    <p>Email: info@excellenttaekwondo.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Excellent Taekwondo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/97332051159" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

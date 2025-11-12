@@ -1,56 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our classes at Excellent Taekwondo Bahrain - Taekwondo, Fitness, Swimming, Badminton, and Umpire Courses in Adliya, Manama. Programs for all ages and skill levels.">
-    <meta name="keywords" content="Taekwondo classes in Bahrain, Fitness classes in Bahrain, Swimming classes in Bahrain, Badminton classes in Bahrain, Umpire courses in Bahrain, martial arts Manama, sports academy Adliya">
+    <!-- ===== Meta base ===== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#E10600">
+    <title>Classes in Bahrain – Taekwondo, Fitness, Swimming, Badminton | Adliya • Manama • Zinj • Riffa • Seef</title>
+    <meta name="description" content="Join classes across Bahrain: Taekwondo, Fitness, Swimming, and Badminton. Locations in Adliya, Manama, Zinj, Seef, Riffa, Isa Town, Sitra, Budaiya, Juffair, Sanabis, Muharraq, Hidd, Tubli, Hamad Town, Saar. Kids, teens, adults. Book a trial today.">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Our Classes - Excellent Taekwondo Bahrain">
-    <meta property="og:description" content="Comprehensive martial arts and fitness programs for all ages and skill levels">
+    <!-- Canonical / hreflang -->
+    <link rel="canonical" href="https://excellenttaekwondo.com/classes.html">
+    <link rel="alternate" hreflang="en-bh" href="https://excellenttaekwondo.com/classes.html">
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Classes in Bahrain – Taekwondo, Fitness, Swimming & Badminton">
+    <meta property="og:description" content="Kids, teens & adults. City coverage: Adliya, Manama, Zinj, Seef, Riffa, Isa Town, Sitra, Budaiya, Juffair, Sanabis, Muharraq, Hidd, Tubli, Hamad Town, Saar. Book a trial.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://excellenttaekwondo.com/classes.html">
-    
-    <!-- Twitter Card Meta Tags -->
+    <meta property="og:site_name" content="Excellent Taekwondo Bahrain">
+    <meta property="og:image" content="https://excellenttaekwondo.com/images/og/classes-bahrain-hero.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Classes - Excellent Taekwondo">
-    <meta name="twitter:description" content="Taekwondo, Fitness, Swimming, Badminton & Umpire Courses">
+    <meta name="twitter:title" content="Classes in Bahrain – Taekwondo, Fitness, Swimming & Badminton">
+    <meta name="twitter:description" content="Classes across Bahrain (Adliya, Manama, Zinj, Riffa, Seef, more). Book a trial.">
+    <meta name="twitter:image" content="https://excellenttaekwondo.com/images/og/classes-bahrain-hero.jpg">
     
-    <!-- Schema.org Markup for Courses -->
+    <!-- Icons / PWA -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- ====== JSON-LD: LocalBusiness + ItemList + FAQPage ====== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
+      "@graph": [
         {
-          "@type": "Course",
-          "name": "Taekwondo Classes in Bahrain",
-          "description": "Traditional Korean martial arts training for all ages and skill levels",
-          "provider": {
-            "@type": "Organization",
-            "name": "Excellent Taekwondo",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Manama",
-              "addressCountry": "BH"
-            }
-          }
+          "@type": "LocalBusiness",
+          "@id": "https://excellenttaekwondo.com/#business",
+          "name": "Excellent Taekwondo Bahrain",
+          "url": "https://excellenttaekwondo.com/",
+          "image": "https://excellenttaekwondo.com/images/og/classes-bahrain-hero.jpg",
+          "telephone": "+97332051159",
+          "email": "info@excellenttaekwondo.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Adliya",
+            "addressLocality": "Manama",
+            "addressCountry": "BH"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": 26.217, "longitude": 50.597 },
+          "areaServed": ["Adliya","Manama","Zinj","Seef","Riffa","Isa Town","Sitra","Budaiya","Juffair","Sanabis","Muharraq","Hidd","Tubli","Hamad Town","Saar","Bahrain"],
+          "sameAs": [
+            "https://www.instagram.com/excellent_taekwondo_bahrain",
+            "https://www.facebook.com/excellenttaekwondobahrain",
+            "https://maps.google.com/?cid=YOUR_GMB_CID"
+          ],
+          "openingHours": "Mo-Su 08:00-22:00"
         },
         {
-          "@type": "Course",
-          "name": "Fitness Classes in Bahrain",
-          "description": "Comprehensive fitness training programs",
-          "provider": {
-            "@type": "Organization",
-            "name": "Excellent Taekwondo"
-          }
+          "@type": "ItemList",
+          "@id": "https://excellenttaekwondo.com/classes.html#list",
+          "name": "Classes in Bahrain",
+          "itemListElement": [
+            {
+              "@type": "Course",
+              "name": "Taekwondo Classes in Bahrain",
+              "description": "Kids, teens, adults. Poomsae, Olympic sparring, self-defense and grading.",
+              "provider": { "@id": "https://excellenttaekwondo.com/#business" },
+              "hasCourseInstance": [
+                { "@type": "CourseInstance", "courseMode": "InPerson", "location": "Adliya, Manama, Zinj, Seef, Riffa" }
+              ]
+            },
+            {
+              "@type": "Course",
+              "name": "Fitness Classes in Bahrain",
+              "description": "Strength & conditioning, HIIT, mobility. Personal training available.",
+              "provider": { "@id": "https://excellenttaekwondo.com/#business" },
+              "hasCourseInstance": [
+                { "@type": "CourseInstance", "courseMode": "InPerson/AtHome", "location": "Manama, Seef, Riffa, Adliya, Juffair" }
+              ]
+            },
+            {
+              "@type": "Course",
+              "name": "Swimming Classes in Bahrain",
+              "description": "All ages. Water safety, stroke correction, adults learn-to-swim.",
+              "provider": { "@id": "https://excellenttaekwondo.com/#business" },
+              "hasCourseInstance": [
+                { "@type": "CourseInstance", "courseMode": "InPerson", "location": "Manama, Isa Town, Riffa, Sitra, Muharraq" }
+              ]
+            },
+            {
+              "@type": "Course",
+              "name": "Badminton Classes in Bahrain",
+              "description": "Technique, footwork, match strategy for juniors and adults.",
+              "provider": { "@id": "https://excellenttaekwondo.com/#business" },
+              "hasCourseInstance": [
+                { "@type": "CourseInstance", "courseMode": "InPerson", "location": "Adliya, Seef, Sanabis, Saar, Hamad Town" }
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://excellenttaekwondo.com/classes.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you run classes across Bahrain areas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes—Adliya, Manama, Zinj, Seef, Riffa, Isa Town, Sitra, Budaiya, Juffair, Sanabis, Muharraq, Hidd, Tubli, Hamad Town and Saar. Message us for the closest option."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are there kids, teens and adult groups?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dedicated groups by age and level for all programs." }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer ladies-only sessions?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Ladies-only options are available for fitness and swimming (timings vary by area)." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I book a trial?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes—trials are available. WhatsApp +973 3205 1159 to schedule." }
+            }
+          ]
         }
       ]
     }
     </script>
-    
-    <title>Our Classes - Taekwondo, Fitness, Swimming & More in Bahrain</title>
     
     <!-- Preload Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,6 +183,13 @@
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
+        }
+        
+        @media (max-width: 968px) {
+            .class-detail-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
         }
         
         .class-detail-section:nth-child(even) .class-detail-content {
@@ -178,6 +270,13 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
+        }
+        
+        @media (max-width: 480px) {
+            .features-list {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
         }
         
         .feature-item-inline {
@@ -261,22 +360,119 @@
             opacity: 0.9;
         }
         
-        @media (max-width: 968px) {
-            .class-detail-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
+        @media (max-width: 768px) {
+            .classes-hero {
+                height: 50vh;
+                padding: 20px 15px;
             }
             
-            .class-detail-section:nth-child(even) .class-detail-content {
-                grid-template-columns: 1fr;
+            .classes-hero h1 {
+                font-size: 40px;
             }
             
-            .features-list {
-                grid-template-columns: 1fr;
+            .class-detail-section {
+                padding: 60px 0;
             }
             
             .class-detail-image {
-                height: 400px;
+                height: 350px;
+            }
+            
+            .class-badge {
+                top: 20px;
+                left: 20px;
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+            
+            .class-detail-text h2 {
+                font-size: 32px;
+            }
+            
+            .schedule-info {
+                padding: 20px;
+            }
+            
+            .class-levels {
+                gap: 10px;
+            }
+            
+            .level-badge {
+                padding: 6px 15px;
+                font-size: 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .classes-hero {
+                height: 40vh;
+                padding: 20px 10px;
+            }
+            
+            .classes-hero h1 {
+                font-size: 32px;
+            }
+            
+            .classes-hero p {
+                font-size: 16px;
+            }
+            
+            .class-detail-section {
+                padding: 50px 0;
+            }
+            
+            .class-detail-image {
+                height: 300px;
+            }
+            
+            .class-badge {
+                top: 15px;
+                left: 15px;
+                padding: 8px 15px;
+                font-size: 11px;
+            }
+            
+            .class-detail-text h2 {
+                font-size: 28px;
+            }
+            
+            .class-subtitle {
+                font-size: 16px;
+            }
+            
+            .class-description {
+                font-size: 14px;
+            }
+            
+            .class-features h3 {
+                font-size: 18px;
+            }
+            
+            .feature-item-inline {
+                font-size: 14px;
+            }
+            
+            .schedule-info {
+                padding: 20px 15px;
+            }
+            
+            .schedule-info h4 {
+                font-size: 16px;
+            }
+            
+            .schedule-item {
+                font-size: 14px;
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .class-levels {
+                gap: 8px;
+            }
+            
+            .level-badge {
+                padding: 6px 12px;
+                font-size: 11px;
             }
         }
     </style>
@@ -298,11 +494,44 @@
                     <span></span>
                 </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="profile.html" class="nav-link">Profile</a></li>
-                    <li><a href="classes.html" class="nav-link active">Classes</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="profile.html" class="nav-link dropdown-toggle">
+                            Profile <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="master-faisal.html" class="dropdown-item">
+                                <i class="fas fa-user-tie"></i> Master Faisal MM
+                            </a>
+                            <a href="master-yoosaf.html" class="dropdown-item">
+                                <i class="fas fa-user-graduate"></i> Master Yoosaf MA
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="classes.html" class="nav-link dropdown-toggle active">
+                            Classes <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="taekwondo.html" class="dropdown-item">
+                                <i class="fas fa-fire"></i> Taekwondo Classes
+                            </a>
+                            <a href="fitness.html" class="dropdown-item">
+                                <i class="fas fa-dumbbell"></i> Fitness Classes
+                            </a>
+                            <a href="swimming.html" class="dropdown-item">
+                                <i class="fas fa-swimmer"></i> Swimming Classes
+                            </a>
+                            <a href="badminton.html" class="dropdown-item">
+                                <i class="fas fa-table-tennis"></i> Badminton Classes
+                            </a>
+                            <a href="umpire.html" class="dropdown-item">
+                                <i class="fas fa-whistle"></i> Umpire Courses
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -314,29 +543,6 @@
             <div class="animate-fadeInUp">
                 <h1>OUR CLASSES</h1>
                 <p style="font-size: 20px; color: #000000;">Find Your Perfect Program</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Quick Navigation -->
-    <section style="background: var(--secondary-color); padding: 30px 0;">
-        <div class="container">
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <a href="#taekwondo" style="color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 25px; background: rgba(0,0,0,0.5); transition: var(--transition);">
-                    <i class="fas fa-fire"></i> Taekwondo
-                </a>
-                <a href="#fitness" style="color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 25px; background: rgba(0,0,0,0.5); transition: var(--transition);">
-                    <i class="fas fa-dumbbell"></i> Fitness
-                </a>
-                <a href="#swimming" style="color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 25px; background: rgba(0,0,0,0.5); transition: var(--transition);">
-                    <i class="fas fa-swimmer"></i> Swimming
-                </a>
-                <a href="#badminton" style="color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 25px; background: rgba(0,0,0,0.5); transition: var(--transition);">
-                    <i class="fas fa-table-tennis"></i> Badminton
-                </a>
-                <a href="#umpire" style="color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 25px; background: rgba(0,0,0,0.5); transition: var(--transition);">
-                    <i class="fas fa-whistle"></i> Umpire Courses
-                </a>
             </div>
         </div>
     </section>
@@ -751,7 +957,7 @@
                 </p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 60px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; margin-top: 60px;">
                 <div class="animate-on-scroll" style="background: #FFFFFF; padding: 40px; border-radius: 15px; box-shadow: var(--shadow); text-align: center; border: 1px solid rgba(0, 0, 0, 0.1);">
                     <h3 style="font-family: 'Oswald', sans-serif; font-size: 24px; margin-bottom: 20px; text-transform: uppercase; color: #000000;">Monthly</h3>
                     <div style="font-family: 'Oswald', sans-serif; font-size: 48px; font-weight: 700; color: var(--primary-color); margin-bottom: 10px;">BD XX</div>
@@ -819,32 +1025,32 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h4>Excellent Taekwondo</h4>
-                    <p>Building champions through discipline, strength, and excellence. Join Bahrain's premier martial arts and fitness academy.</p>
+                    <p>Certified coaching for Taekwondo, fitness, swimming and badminton across Bahrain.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="profile.html">Coaches</a></li>
                         <li><a href="classes.html">Classes</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Our Programs</h4>
+                    <h4>Programs</h4>
                     <ul>
-                        <li><a href="#taekwondo">Taekwondo Classes in Bahrain</a></li>
-                        <li><a href="#fitness">Fitness Classes in Bahrain</a></li>
-                        <li><a href="#swimming">Swimming Classes in Bahrain</a></li>
-                        <li><a href="#badminton">Badminton Classes in Bahrain</a></li>
-                        <li><a href="#umpire">Umpire Courses in Bahrain</a></li>
+                        <li><a href="taekwondo.html">Taekwondo</a></li>
+                        <li><a href="fitness.html">Fitness</a></li>
+                        <li><a href="swimming.html">Swimming</a></li>
+                        <li><a href="badminton.html">Badminton</a></li>
+                        <li><a href="umpire.html">Umpire Courses</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <p>Adliya, Manama, Bahrain</p>
-                    <p>Phone: +973 XXXX XXXX</p>
-                    <p>Email: info@excellenttaekwondo.com</p>
+                    <p>Phone: <a href="tel:+97332051159">+973 3205 1159</a></p>
+                    <p>Email: <a href="mailto:info@excellenttaekwondo.com">info@excellenttaekwondo.com</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -854,9 +1060,33 @@
     </footer>
     
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/973XXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+    <a href="https://wa.me/97332051159?text=Hi%20Excellent%20Taekwondo,%20I%27d%20like%20to%20book%20a%20trial" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+    
+    <!-- GA4 (replace G-XXXXXXX with your actual tracking ID) + WhatsApp click tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date()); 
+        gtag('config', 'G-XXXXXXX');
+        
+        // Track WhatsApp clicks
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
+                a.addEventListener('click', function () {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'whatsapp_click', {
+                            event_category:'engagement', 
+                            event_label:a.href, 
+                            value:1
+                        });
+                    }
+                });
+            });
+        });
+    </script>
     
     <!-- Main JavaScript -->
     <script src="script.js"></script>

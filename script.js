@@ -32,8 +32,8 @@ if (navToggle) {
         navToggle.classList.toggle('active');
     });
 
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Close menu when clicking on a link (except dropdown toggle)
+    const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
@@ -41,6 +41,40 @@ if (navToggle) {
         });
     });
 }
+
+// ===================================
+// Dropdown Menu Functionality (Mobile)
+// ===================================
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        // Only prevent default and toggle on mobile
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = toggle.closest('.nav-dropdown');
+            dropdown.classList.toggle('active');
+        }
+    });
+});
+
+// Close dropdown when clicking on dropdown item
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+dropdownItems.forEach(item => {
+    item.addEventListener('click', () => {
+        if (navMenu) {
+            navMenu.classList.remove('active');
+        }
+        if (navToggle) {
+            navToggle.classList.remove('active');
+        }
+        // Close dropdown on mobile
+        const dropdown = document.querySelector('.nav-dropdown.active');
+        if (dropdown) {
+            dropdown.classList.remove('active');
+        }
+    });
+});
 
 // ===================================
 // Smooth Scroll for Anchor Links
@@ -261,7 +295,7 @@ let lastScrollY = window.pageYOffset;
 function updateParallax() {
     lastScrollY = window.pageYOffset;
     
-    // Update hero parallax
+    // Update main hero parallax
     if (hero && lastScrollY < window.innerHeight * 2) {
         hero.style.transform = `translateY(${lastScrollY * 0.5}px)`;
         
@@ -271,6 +305,21 @@ function updateParallax() {
             heroContent.style.opacity = opacity;
         }
     }
+    
+    // Update all page hero sections (about, profile, classes, etc.)
+    const allHeroSections = document.querySelectorAll('.about-hero, .profile-hero, .classes-hero, .class-hero, .instructor-hero');
+    allHeroSections.forEach(heroSection => {
+        if (lastScrollY < window.innerHeight * 2) {
+            heroSection.style.transform = `translateY(${lastScrollY * 0.5}px)`;
+            
+            // Fade hero content
+            const heroContentDiv = heroSection.querySelector('.container');
+            if (heroContentDiv) {
+                const opacity = Math.max(0, 1 - (lastScrollY / 500));
+                heroContentDiv.style.opacity = opacity;
+            }
+        }
+    });
     
     // Update parallax sections
     const parallaxSections = document.querySelectorAll('.parallax-section');
